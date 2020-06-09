@@ -15,6 +15,24 @@
   width: auto;
 }
 
+.website {
+  float: left;
+  background-color: #cbcbcb;
+}
+
+.github {
+  float: right;
+  background-color: #cbcbcb;
+}
+
+.website:hover {
+  background-color: #f6cb59;
+}
+
+.github:hover {
+  background-color: #f6cb59;
+}
+
 /* Picture in more info section */
 @media only screen and (max-width: 1800px) {
   #moreInfoPicRight {
