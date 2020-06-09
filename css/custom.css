@@ -1,11 +1,91 @@
 #image-box {
-  transition: box-shadow .3s;
+  transition: box-shadow 0.3s;
   border: 1px solid #ccc;
   background: #fff;
   float: left;
-  margin-bottom:5px;
+  margin-bottom: 5px;
 }
 
 #image-box:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.9); 
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.9);
 }
+
+#moreInfoPicRight {
+  height: auto;
+  width: auto;
+}
+
+/* Picture in more info section */
+@media only screen and (max-width: 1800px) {
+  #moreInfoPicRight {
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  #moreInfoPicRight {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  #moreInfoPicRight {
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #moreInfoPicRight {
+    width: 150px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #moreInfoPicRight {
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 764px) {
+  #moreInfoPicRight {
+    width: auto;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 524px) {
+  #moreInfoPicRight {
+    width: 300px;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 324px) {
+  #moreInfoPicRight {
+    width: 200px;
+    height: auto;
+  }
+}
+/* End of photo in more info section */
+
+/* Responsive Font in Header section */
+@media only screen and (max-width: 516px) {
+  #intro-text {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 356px) {
+  #intro-text {
+    font-size: 1.5rem;
+  }
+}
+/* End of font responsiveness */
+
+/* Linkedin and Github button responsiveness */
+@media only screen and (max-width: 429px) {
+  .buttonMargin {
+    margin-bottom: 10px !important;
+  }
+}
+/* End of button responsiveness */
