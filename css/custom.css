@@ -33,6 +33,16 @@
   background-color: #f6cb59;
 }
 
+#contactEmail {
+  margin-top: 40px;
+  font-family: "Montserrat", sans-serif;
+  border: 1px solid black;
+}
+
+#italic {
+  font-style: italic;
+}
+
 /* Picture in more info section */
 @media only screen and (max-width: 1800px) {
   #moreInfoPicRight {
