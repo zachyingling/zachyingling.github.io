@@ -9,7 +9,7 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendorFolder/autoload.php';
 
 // Loading dotenv to create environment variables
-$dotenv = Dotenv\Dotenv::create(__DIR__);
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
 // Instantiation and passing `true` enables exceptions
@@ -29,14 +29,14 @@ if (isset($_POST['submit'])) {
       $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
       $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
       $mail->SMTPSecure = 'tls';
-      $mail->Username   = 'zpyingling9559@gmail.com';                     // SMTP username
+      $mail->Username   = 'zachyingling9559@gmail.com';                     // SMTP username
       $mail->Password   = $_ENV['GOOGLE_PASS'];                               // SMTP password
       $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
       $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
       //Recipients
       $mail->setFrom($email, $fullname);
-      $mail->addAddress('zpyingling9559@gmail.com');     // Add a recipient
+      $mail->addAddress('zachyingling9559@gmail.com');     // Add a recipient
 
       // Content
       $mail->isHTML(true);                                  // Set email format to HTML
