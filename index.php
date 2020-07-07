@@ -9,11 +9,11 @@
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
     <!-- Bootstrap CSS-->
-    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="vendorFolder/bootstrap/css/bootstrap.min.css" />
     <!-- Font Awesome CSS-->
     <link
       rel="stylesheet"
-      href="vendor/font-awesome/css/font-awesome.min.css"
+      href="vendorFolder/font-awesome/css/font-awesome.min.css"
     />
     <!-- Google fonts - Montserrat for headings, Cardo for copy-->
     <link
@@ -21,7 +21,7 @@
       href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Cardo:400,400italic,700"
     />
     <!-- Lightbox-->
-    <link rel="stylesheet" href="vendor/lightbox2/css/lightbox.min.css" />
+    <link rel="stylesheet" href="vendorFolder/lightbox2/css/lightbox.min.css" />
     <!-- theme stylesheet-->
     <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet" />
     <!-- Custom stylesheet - for your changes-->
@@ -673,10 +673,10 @@
       </div>
     </footer>
     <!-- JavaScript files-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="vendor/jquery.cookie/jquery.cookie.js"></script>
-    <script src="vendor/lightbox2/js/lightbox.min.js"></script>
+    <script src="vendorFolder/jquery/jquery.min.js"></script>
+    <script src="vendorFolder/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendorFolder/jquery.cookie/jquery.cookie.js"></script>
+    <script src="vendorFolder/lightbox2/js/lightbox.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js"></script>
     <script src="js/front.js"></script>
   </body>
