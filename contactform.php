@@ -9,7 +9,7 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendorFolder/autoload.php';
 
 // Loading dotenv to create environment variables
-$dotenv = \Dotenv\Dotenv::createImmutable(__DIR__ . "/../");
+$dotenv = \Dotenv\Dotenv::createImmutable('/../'.__DIR__ );
 $dotenv->load();
 $dotenv->required('GOOGLE_PASS')->notEmpty();
 
