@@ -9,10 +9,9 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendorFolder/autoload.php';
 
 // Loading dotenv to create environment variables
-$dotenv = new Dotenv\Dotenv(__DIR__);
-if(file_exists(".env")) {
-    $dotenv->load();
-}
+$dotenv = Dotenv\Dotenv::createMutable(__DIR__);
+$dotenv->load();
+$dotenv->required('GOOGLE_PASS');
 
 // Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer(true);
@@ -32,7 +31,7 @@ if (isset($_POST['submit'])) {
       $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
       $mail->SMTPSecure = 'tls';
       $mail->Username   = 'zachyingling9559@gmail.com';                     // SMTP username
-      $mail->Password   = getenv('GOOGLE_PASS');                               // SMTP password
+      $mail->Password   = $_ENV['GOOGLE_PASS'];                               // SMTP password
       $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
       $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
@@ -42,8 +41,8 @@ if (isset($_POST['submit'])) {
 
       // Content
       $mail->isHTML(true);                                  // Set email format to HTML
-      $mail->Subject = 'User email';
-      $mail->Body = $message;
+      $mail->Subject = $fullname;
+      $mail->Body = 'From: '.$email.'<br/><br/>'.$message;
 
       $mail->send();
       echo 'Message has been sent';
