@@ -8,6 +8,10 @@ use PHPMailer\PHPMailer\Exception;
 // Load Composer's autoloader
 require 'vendor/autoload.php';
 
+// Loading dotenv to create environment variables
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 // Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer(true);
 
@@ -22,22 +26,22 @@ if (isset($_POST['submit'])) {
       //Server settings
       $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
       $mail->isSMTP();                                            // Send using SMTP
-      $mail->Host       = 'smtp-relay.sendinblue.com';                    // Set the SMTP server to send through
+      $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
       $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+      $mail->SMTPSecure = 'tls';
       $mail->Username   = 'zpyingling9559@gmail.com';                     // SMTP username
-      $mail->Password   = 'hSUcJgdAjvkbMX3y';                               // SMTP password
+      $mail->Password   = $_ENV['GOOGLE_PASS'];                               // SMTP password
       $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
       $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
       //Recipients
-      $mail->setFrom('zpyingling9559@gmail.com', 'Zachary');
-      $mail->addAddress($email, $fullname);     // Add a recipient
+      $mail->setFrom($email, $fullname);
+      $mail->addAddress('zpyingling9559@gmail.com');     // Add a recipient
 
       // Content
       $mail->isHTML(true);                                  // Set email format to HTML
       $mail->Subject = 'User email';
       $mail->Body = $message;
-      $mail->AltBody = $message;
 
       $mail->send();
       echo 'Message has been sent';
