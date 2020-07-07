@@ -645,7 +645,7 @@
                     ><i class="fa fa-github"></i
                   ></a>
                 </p>
-                <p id="contactEmail">Email: <span id="italic">zpyingling9559@protonmail.com</span></p>
+                <p id="contactEmail">Email: <span id="italic">zachyingling9559@gmail.com</span></p>
               </div>
             </div>
           </div>
