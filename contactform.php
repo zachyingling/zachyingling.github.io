@@ -9,9 +9,10 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendorFolder/autoload.php';
 
 // Loading dotenv to create environment variables
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
-$dotenv->required('GOOGLE_PASS');
+$dotenv = new Dotenv\Dotenv(__DIR__);
+if(file_exists(".env")) {
+    $dotenv->load();
+}
 
 // Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer(true);
