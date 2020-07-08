@@ -1,0 +1,24 @@
+{
+  "name": "zachyingling.github.io",
+  "version": "1.0.0",
+  "description": "## Description This is my 4th and latest portfolio showing all of my projects I have made. All of my projects are deployed to Github pages or if it is not deployable I have a live demo of the application on my youtube channel.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zachyingling/zachyingling.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zachyingling/zachyingling.github.io/issues"
+  },
+  "homepage": "https://github.com/zachyingling/zachyingling.github.io#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemailer": "^6.4.10"
+  }
+}
