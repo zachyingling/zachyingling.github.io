@@ -6,10 +6,10 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 // Load Composer's autoloader
-require 'vendorFolder/autoload.php';
+require_once 'vendorFolder/autoload.php';
 
 // Loading dotenv to create environment variables
-$dotenv = \Dotenv\Dotenv::createImmutable(__DIR__ );
+$dotenv = \Dotenv\Dotenv::createImmutable(__DIR__. '/../');
 $dotenv->load();
 $dotenv->required('GOOGLE_PASS')->notEmpty();
 
