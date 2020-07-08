@@ -6,7 +6,7 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 // Load Composer's autoloader
-require 'vendorFolder/autoload.php';
+require 'vendor/autoload.php';
 
 // Loading dotenv to create environment variables
 $dotenv = \Dotenv\Dotenv::createImmutable(__DIR__);
@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
     $mail->SMTPSecure = 'tls';
     $mail->Username   = 'zachyingling9559@gmail.com';                     // SMTP username
-    $mail->Password   = $_SERVER['GOOGLE_PASS'];                               // SMTP password
+    $mail->Password   = $_ENV['GOOGLE_PASS'];                               // SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
