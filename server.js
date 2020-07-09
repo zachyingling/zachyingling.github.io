@@ -41,7 +41,7 @@ app.post("/api/contact-form", (req, res) => {
 
   transporter.sendMail(mailOptions, (err, data) => {
     if (err) {
-      res.send("Error: " + err);
+      res.send(err);
     } else {
       res.redirect("/redirect");
     }
