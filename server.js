@@ -35,15 +35,15 @@ app.post("/api/contact-form", (req, res) => {
   let mailOptions = {
     from: email,
     to: process.env.GOOGLE_EMAIL,
-    subject: "testing email",
-    text: message
+    subject: "Email from Portfolio",
+    text: "From: " + email + "\nName: " + firstName + " " + lastName + "\n\n" + message
   };
 
   transporter.sendMail(mailOptions, (err, data) => {
     if (err) {
       res.send("Error: " + err);
     } else {
-      res.send(data);
+      res.redirect("/redirect");
     }
   });
 });
