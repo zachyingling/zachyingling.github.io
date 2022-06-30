@@ -299,7 +299,7 @@ p.social a.facebook {
 }
 
 p.social a.gplus {
-  background-color: #333;
+  background-color: rgb(0, 0, 0);
 }
 
 p.social a.twitter {
